@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block title %}
+
+{% if article %}
+    <h3>{{article["title"]}}</h3>
+    <hr>
+    Yazar ={{article["author"]}}
+    <hr>
+    Tarih ={{article["createDate"]}}
+    <hr>
+     {{article["content"]|safe}}
+
+
+
+{% else %}
+
+<div class = "alert alert-warning"> Boyle bir makale yok...</div>
+
+{% endif %}
+
+
+
+
+
+{% endblock title %}

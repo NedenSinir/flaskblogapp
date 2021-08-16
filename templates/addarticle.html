@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% from 'includes/formhelpers.html' import render_field %}
+
+{% block title %}
+
+<h3>Makale Olustur</h3>
+<hr>
+<form method="POST" >
+    {{ render_field(form.title,class="form-control") }}
+    {{ render_field(form.content,class="form-control") }}
+   
+    <button type="submit" class="btn btn-success btn-lg">Makale Olustur</button>
+
+
+
+</form>
+    <form method ="post"enctype="multipart/form-data">
+    {{fileForm.file}}
+    <input type="submit" name="submit_button" value="Do Something">
+    
+    </form>
+{% endblock title %}
